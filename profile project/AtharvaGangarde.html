@@ -1,0 +1,528 @@
+<html>
+    <head>
+        <title>
+            Atharva Gangarde
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+                body{
+                    background-color: #333; 
+                    font-family:  cursive;
+                }
+                section{
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center; 
+                }
+                section:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background:deeppink;
+                    clip-path: polygon(54% 0,100% 0, 100% 100%, 84% 100%);
+                    animation: fade-in 0.5s ease-in forwards;
+                    animation-delay: 0.5s;
+                    opacity: 1;
+                }
+                }
+                section .content{
+                    position: relative;
+                    padding: 100px 50px 100px 150px;
+                    box-sizing: border-box;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 1.5s;
+                    opacity: 1;
+                }
+                section .content h2{
+                    color: aqua;
+                    font-size: 4em;
+                    font-weight: bolder;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0s;
+                    opacity: 0;
+                }
+                section .content h1{
+                    color: #fff;
+                    font-size: 2em;
+                    font-family: monospace;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0s;
+                    opacity: 0;
+                    font-weight: none;
+                }
+                section .imgBx{
+                    position: relative;
+                    padding-right: 100px;
+                }
+                section .imgBx img{
+                    max-width: 500px;
+                    max-width: 500px;
+                    animation: fade-in 0.5s ease-in forwards;
+                    animation-delay: 0.5s;
+                    opacity: 1;
+                }
+                section .content a{
+                    background-color: deeppink;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    color: aliceblue;
+                    box-shadow: 0 10px 15px #000;
+                    margin-top: 20px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 0.95em;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0s;
+                    opacity: 0;
+                    border-radius: 10%;
+                }
+                section .content a:hover{
+                    background:#3498db;
+                }
+                .sci{
+                    position: absolute;
+                    top:90%;
+                    display: inline-block;
+                    display: flex;
+                    left: 0;
+                    animation: left-in 1s ease-in forwards;
+                    animation-delay: 1s;
+                    opacity: 1;
+                }
+                .sci li{
+                    list-style: none;
+                }
+                .sci li a{
+                    text-decoration: none;
+                    color: #999;
+                    margin-right: 30px;
+                    font-size: 1.5em;
+                }
+                .sci li a:hover{
+                    color: aliceblue;
+                }
+                .nav{
+                    position: absolute;
+                    top: 75px;
+                    left: 0px;
+                    display: flex;
+                    border-left: 5px solid #ff2562;
+                    padding-left: 20px;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0s;
+                    opacity: 0;
+                }
+                .nav li{
+                    list-style: none;
+                }
+                .nav li a{
+                    text-decoration: none;
+                    color: #fff;
+                    margin-right: 30px;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                .nav li a.active,
+                .nav li a:hover{
+                    color: #ff2562;
+                }
+                @keyframes fade-in
+                {
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                }
+                @keyframes left-in
+                {
+                    0%{
+                        transform: translateX(-200px);
+                        opacity: 0;
+                    }
+                    100%{
+                        transform: translateX(0px);        
+                        opacity: 1;
+                    }
+                }
+                @media (max-width:1000px)
+                {
+                    .menuicon
+                    {
+                        position: fixed;
+                        top:40px;
+                        right: 40px;
+                        width:30px;
+                        height: 30px;
+                        background: url(menu.png);
+                        filter: invert(1);
+                        background-size: 30px;
+                        cursor: pointer;
+                        background-repeat: no-repeat;
+                        z-index: 1000;
+                    }
+                    .menuicon .active
+                    {
+                        background: url(close.png);
+                        filter: invert(1);
+                        background-size: 30px;
+                        cursor: pointer;
+                        background-repeat: no-repeat;
+                        z-index: 1000;
+                    }
+                    .nav{
+                        position: fixed;
+                        top: 0;
+                        left: -200%;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,.95);
+                        flex-direction: column;
+                        z-index: 11;
+                        border: none;
+                        padding: 50px;
+                    }
+                    .nav.active
+                    {
+                        left: 0;
+                    }
+                    .nav li{
+                        margin: 5px 0;
+                    }
+                    section{
+                        flex-direction: column-reverse;
+                        justify-content: center;
+                    }
+                    section:before
+                    {
+                        clip-path:polygon(0 0,100% 0,100% 10%, 0 56%);
+                        width: 100%;
+                    }
+                    section .content
+                    {
+                        padding: 50px;
+                        margin-bottom: 30px;
+                    }
+                    section .content h2
+                    {
+                        font-size: 1em;
+                    }
+                    section .content h1
+                    {
+                        font-size: 1.5em;
+                    }
+                    section .content a
+                    {
+                        font-size: 0.8em;
+                        padding: 10px;
+                    }
+                    section .imgBx
+                    {
+                        max-width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-right: 0;
+                        margin-top:20px;
+                    }
+                    section{
+                        flex-direction: column-reverse;
+                        justify-content: center;
+                    }
+                    section:before{
+                        width: 100%;
+                        clip-path:polygon(0 0,100% 0,100% 10%,0 26%);
+                    }
+                    section .content
+                    {
+                        padding: 50px;
+                        margin-bottom: 30px;
+                    }
+                    section .content h2{
+                        font-size: 2.5em;
+                    }
+                    section .content p{
+                        font-size: 1em;
+                    }
+                    section .content a {
+                        font-size:0.8em;
+                        padding: 10px;
+                    }
+                    section .imgBx{
+                        max-width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-right: 0;
+                        margin-top: 20px;
+                    }
+                    section .imgBx img{
+                        max-width: 300px;
+                    }
+                    .sci{
+                        align-items: baseline;
+                        padding-top: 10%;
+                        left: 0px;
+                        bottom: 300px;
+                        font-size: 0.8em;
+                    }
+                     p{
+                         padding-top: 0px;
+                        font-size: 2.2em;
+                    }
+                    .container p span {
+                        font-size: 1.5em;
+                    }
+                    .bubble {
+                        align-items: baseline;
+                    }
+                    .bubble:nth-child(1) {
+                        align-items: baseline;
+                    }
+                }
+                .container {
+                    height: 100px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0.5s;
+                    opacity: 0;
+                  }
+                  .container p {
+                    font-size: 35px;
+                    padding: 0.5rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    text-align: center;
+                    overflow: hidden;
+                    font-family: monospace;
+                  }
+                  .container p span.typed-text {
+                    font-weight: normal;
+                    color: deeppink;
+                    font-family:monospace;
+                  }
+                  .container p span.cursor {
+                    display: inline-block;
+                    background-color: #fff;
+                    margin-left: 0.1rem;
+                    width: 3px;
+                    animation: blink 1s infinite;
+                  }
+                  .container p span.cursor.typing {
+                    animation: none;
+                  }
+                  @keyframes blink {
+                    0%  { background-color: #ccc; }
+                    49% { background-color: #ccc; }
+                    50% { background-color: transparent; }
+                    99% { background-color: transparent; }
+                    100%  { background-color: #ccc; }
+                  }
+                  .rounded-circle {
+                    float: right;
+                    border-radius: 50%;
+                    width: 150px;
+                    height: 150px;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0.5s;
+                    opacity: 0;
+
+                  }
+                  p{
+                    float: left;
+                    font-size: 17px;
+                    color: #fff;
+                    padding-left: 87%;
+                    font-family: monospace;
+                    animation: left-in 0.5s ease-in forwards;
+                    animation-delay: 0.5s;
+                    opacity: 0;
+                }
+/******************************** Animation Starts***********************************/
+                .bubbels{
+                  width: 100%;
+                  z-index: 0;
+                  overflow: hidden;
+                  top: 0;
+                  left: 0;
+                }
+                .bubble{
+                  position: absolute;
+                  bottom:-500px;
+                  background:Deeppink;
+                  border-radius: 50%;
+                  opacity: 0.5;
+                  animation: flying 10s infinite ease-in;
+                }
+                .bubble:nth-child(1){
+                  width: 50px;
+                  height: 50px;
+                  left: 10%;
+                  animation-duration: 8s;
+                }
+                .bubble:nth-child(2){
+                  width: 100px;
+                  height: 100px;
+                  left: 50%;
+                  animation-duration: 5s;
+                  animation-delay: 1s;
+                }
+                .bubble:nth-child(3){
+                  width: 50px;
+                  height: 50px;
+                  left: 35%;
+                  animation-duration: 10s;
+                  animation-delay: 2s;
+                }
+                @keyframes flying {
+                  0%{
+                    bottom: -100px;
+                    transform: translateX(0);
+                  }
+                  50%{
+                    transform: translateX(100px);
+                  }
+                  100%{
+                    bottom: 1080px;
+                    transform: translateX(-200px);
+                  }
+                }
+        </style>    
+    </head>
+    <body>
+        <Section>
+            <div class="content">
+                <div>
+                    <h2>
+                        Atharva Gangarde 
+                    </h2>
+                       
+                   <div class="container">
+                    <p>A&nbsp;<span class="typed-text">&nbsp;</span><span class="cursor">&nbsp;</span></p>
+
+                    <script type="text/javascript">
+                        const typedTextSpan = document.querySelector(".typed-text");
+                      const cursorSpan = document.querySelector(".cursor");
+
+                      const textArray = ["Web Page Developer", "Website Designer", "Programmer"];
+                      const typingDelay = 200;
+                      const erasingDelay = 100;
+                      const newTextDelay = 2000; // Delay between current and next text
+                      let textArrayIndex = 0;
+                      let charIndex = 0;
+
+                      function type() {
+                        if (charIndex < textArray[textArrayIndex].length) {
+                          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                          charIndex++;
+                          setTimeout(type, typingDelay);
+                        } 
+                        else {
+                          cursorSpan.classList.remove("typing");
+                          setTimeout(erase, newTextDelay);
+                        }
+                      }
+
+                      function erase() {
+                        if (charIndex > 0) {
+                          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                          charIndex--;
+                          setTimeout(erase, erasingDelay);
+                        } 
+                        else {
+                          cursorSpan.classList.remove("typing");
+                          textArrayIndex++;
+                          if(textArrayIndex>=textArray.length) textArrayIndex=0;
+                          setTimeout(type, typingDelay + 1100);
+                        }
+                      }
+
+                      document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+                        if(textArray.length) setTimeout(type, newTextDelay + 250);
+                      });
+                    </script>
+              </div>
+                    <h1>
+                        I`am Atharv Gangarde.<br><br>
+                        Well Known as Webpage Developer and Designer.<br>
+                        I have Developed Many Websites Notable are:<br>
+                        www.hsfotmanagments.com & www.gangapurmonginis.com are my Most Popular Web Sites.
+                        <br>
+                        I am Able to Attack on Any android Mobile and Pc. 
+
+                    </h1>
+                    
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="imgBx">
+                <img src="logo.png">
+            </div>
+            <ul class="nav">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Achivements</a></li>
+                <li><a href="#">Contact</a></li>                
+            </ul>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/atharva.gangarde.3">Facebook</a></li>
+                <li><a href="https://www.instagram.com/atharvagangarde_999/">Instagram</a></li>
+                <li><a class="mobilesOnly" href="tel:+91 827 528 0305">WhatsApp</a></li> 
+            </ul>
+        </Section>
+        <span class="menuicon" id="toggle" onclick="menuToggle()"></span>
+        <script type="text/javascript">
+            function menuToggle(){
+                var nav = document.getElementById("nav");
+                nav.classList.toggle('active')
+                var toggle = document.getElementById("toggle");
+                toggle.classList.toggle('active')
+            }
+        </script>
+        <!--*********************Animation Starts**********************************-->
+
+            <div class="bubbels">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+
+<!--*********************************** Animation Ends********************************-->  
+        <!--
+            [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+            [::::::::::::::      ::::::::::::::]
+            [::::::::::::::      ::::::::::::::]
+            [::::::[[[[[[[:      :]]]]]]]::::::]
+            [:::::[                      ]:::::]
+            [:::::[                      ]:::::]
+            [:::::[                      ]:::::]
+            [:::::[        Get in        ]:::::]
+            [:::::[     Touch With me    ]:::::]
+            [:::::[                      ]:::::]
+            [:::::[    Atharv Ganagrde   ]:::::]
+            [:::::[                      ]:::::]
+            [:::::[                      ]:::::]
+            [:::::[                      ]:::::]
+            [::::::[[[[[[[:      :]]]]]]]::::::]
+            [::::::::::::::      ::::::::::::::]
+            [::::::::::::::      ::::::::::::::]
+            [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+        -->
+    </body>
+</html>
